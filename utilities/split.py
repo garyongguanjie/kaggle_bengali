@@ -31,9 +31,9 @@ for i in range(5):
     training_index = train_df[train_df['fold'].isin(ls)].index.values
     validation_set = x[validation_index]
     training_set = x[training_index]
-    val_df = train_df.loc[validation_index]
-    val_df.to_csv(f"validation_{i}")
-    newdf = train_df.loc[training_index]
-    newdf.to_csv(f"training_{i}")
+    val_labels = train_df.loc[validation_index]
+    val_labels.to_csv(f"validation_{i}.csv",index=False)
+    train_labels = train_df.loc[training_index]
+    train_labels.to_csv(f"training_{i}.csv",index=False)
     np.save(f"validation_set_{i}",validation_set)
     np.save(f"training_set_{i}",training_set)
