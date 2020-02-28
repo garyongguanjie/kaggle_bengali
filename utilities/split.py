@@ -32,7 +32,7 @@ for i in range(5):
     validation_set = x[validation_index]
     training_set = x[training_index]
     val_df = train_df.loc[validation_index]
-    df.to_csv(f"validation_{i}")
+    val_df.to_csv(f"validation_{i}")
     newdf = train_df.loc[training_index]
     newdf.to_csv(f"training_{i}")
     np.save(f"validation_set_{i}",validation_set)
