@@ -4,3 +4,6 @@ __pycache__/
 *.npy
 *.zip
 .DS_Store
+settings.json
+split_*
+train_full
