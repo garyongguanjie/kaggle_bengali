@@ -4,6 +4,7 @@ from torch.utils.data import Dataset
 import pandas as pd
 import torch
 import numpy as np
+from PIL import Image
 class BengaliDataset(Dataset):
     def __init__(self,npy_file,label_csv,transform=None):
         self.npy_file = np.load(npy_file)
@@ -17,10 +18,8 @@ class BengaliDataset(Dataset):
 
     def __getitem__(self, index):
         image_arr = self.npy_file[index]
-        image_arr = torch.from_numpy(image_arr).repeat(3,1,1)#convert tp 3 channels so can pass easily to imagenet models
-        if self.transform:
-            image_arr = self.transform(image_arr)
-        print(type(self.grapheme_root[index]))
+        image_arr = Image.fromarray(image_arr).convert("RGB")
+        image_arr = self.transform(image_arr)
         grapheme_root = torch.Tensor([self.grapheme_root[index]]).long()
         vowel_diacritic = torch.Tensor([self.vowel_diacritic[index]]).long()
         consonant_diacritic = torch.Tensor([self.consonant_diacritic[index]]).long()
