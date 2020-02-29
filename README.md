@@ -12,6 +12,8 @@ Spliting used https://www.kaggle.com/yiheng/iterative-stratification which uses 
 
 You only need to use **one** split file. The rest are just different splits of the same data in case we want to do cross validation. Train_full contains unsplit data.
 
+5split.zip gives data split into 5 chunks. Because cannot fit everything into memory when I tested, gives os 22 error.
+
 train.csv -> original file
 
 train_0.csv ->label file that corresponds to input training_set_0.npy
@@ -22,6 +24,10 @@ validation_0.csv -> label file that corresponds to input validation_set_0.npy
 https://sutdapac-my.sharepoint.com/:f:/g/personal/gary_ong_mymail_sutd_edu_sg/Eo7SYmp7NttFqveH-3dxY9wBZiaBh4FpWtWe0Xj-zZaWgw
 
 ## Download straight to colab
+5split.zip
+```
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EY4SYAbFE99BqSW3A5LqqqUBbA73KjTLeLJ2-Emko4snVw?e=04bPHS" -O 5split.zip
+```
 split_0.zip
 ```
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EeL3Am93wixKjRBort1fGesBD-j5tadq6qe5ASIpcM-0_g?e=j3NfHH&download=1" -O split_0.zip
