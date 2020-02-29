@@ -10,6 +10,8 @@ Spliting used https://www.kaggle.com/yiheng/iterative-stratification which uses 
 
 ## File explanation
 
+You only need to use **one** split file. The rest are just different splits of the same data in case we want to do cross validation. Train_full contains unsplit data.
+
 train.csv -> original file
 
 train_0.csv ->label file that corresponds to input training_set_0.npy
