@@ -3,10 +3,11 @@
 from torch.utils.data import Dataset
 import pandas as pd
 import torch
+import numpy as np
 class BengaliDataset(Dataset):
     def __init__(self,npy_file,label_csv,transform=None):
-        super().__init__(self)
-        self.npy_file = npy_file
+        self.npy_file = np.load(npy_file)
+        self.transform = transform
         df = pd.read_csv(label_csv)
         # for faster access i think
         self.grapheme_root = df["grapheme_root"].values
@@ -19,14 +20,17 @@ class BengaliDataset(Dataset):
         image_arr = torch.from_numpy(image_arr).repeat(3,1,1)#convert tp 3 channels so can pass easily to imagenet models
         if self.transform:
             image_arr = self.transform(image_arr)
-        grapheme_root = torch.Tensor([self.grapheme_root[index]],dtype=torch.long)
-        vowel_diacritic = torch.Tensor([self.vowel_diacritic[index]],dtype=torch.long)
-        consonant_diacritic = torch.Tensor([self.consonant_diacritic[index]],dtype=torch.long)
+        print(type(self.grapheme_root[index]))
+        grapheme_root = torch.Tensor([self.grapheme_root[index]]).long()
+        vowel_diacritic = torch.Tensor([self.vowel_diacritic[index]]).long()
+        consonant_diacritic = torch.Tensor([self.consonant_diacritic[index]]).long()
         
         return {"image":image_arr,"grapheme_root":grapheme_root,"vowel_diacritic":vowel_diacritic,"consonant_diacritic":consonant_diacritic}
 
     def __len__(self):
-        return self.npy.shape[0]
+        return self.npy_file.shape[0]
     
 if __name__ == "__main__":
-    train_data = BengaliDataset()
+    train_data = BengaliDataset("split_0/training_set_0.npy","split_0/training_0.csv")
+    print(len(train_data))
+    print(train_data[0])
