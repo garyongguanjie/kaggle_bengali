@@ -25,15 +25,8 @@ train_df['fold'] = train_df['fold'].astype('int')
 x = np.load("train.npy")
 
 for i in range(5):
-    ls = [0,1,2,3,4]
-    ls.remove(i)
-    validation_index = train_df[train_df['fold']==i].index.values
-    training_index = train_df[train_df['fold'].isin(ls)].index.values
-    validation_set = x[validation_index]
-    training_set = x[training_index]
-    val_labels = train_df.loc[validation_index]
-    val_labels.to_csv(f"validation_{i}.csv",index=False)
-    train_labels = train_df.loc[training_index]
-    train_labels.to_csv(f"training_{i}.csv",index=False)
-    np.save(f"validation_set_{i}",validation_set)
-    np.save(f"training_set_{i}",training_set)
+    index = train_df[train_df['fold']==i].index.values
+    tr_set = x[index]
+    tr_labels = train_df.loc[index]
+    tr_labels.to_csv(f"set_{i}.csv",index=False)
+    np.save(f"vset_{i}",tr_set)
