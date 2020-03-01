@@ -62,8 +62,8 @@ def train_model(model, criterion, optimizer, device, dataloaders, scheduler=None
                     outputs = model(inputs)
                     
                     grapheme_preds = outputs[:,:168].argmax(dim=1)
-                    vowel_preds = outputs[:,168:179].argmax(dim=1) + 168
-                    consonant_preds = outputs[:,179:186].argmax(dim=1) + 168 + 11
+                    vowel_preds = outputs[:,168:179].argmax(dim=1)
+                    consonant_preds = outputs[:,179:186].argmax(dim=1)
 
                     loss = criterion(outputs, grapheme_root_label.squeeze(1),vowel_diacritic_label.squeeze(1),consonant_diacritic_label.squeeze(1))
 
