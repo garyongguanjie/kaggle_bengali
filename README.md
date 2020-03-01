@@ -12,7 +12,7 @@ Spliting used https://www.kaggle.com/yiheng/iterative-stratification which uses 
 
 You only need to use **one** split file. The rest are just different splits of the same data in case we want to do cross validation. Train_full contains unsplit data.
 
-5split.zip gives data split into 5 chunks. Because cannot fit everything into memory when I tested, gives os 22 error.
+5split.zip gives data split into 5 chunks. Because cannot fit everything into memory when I tested, gives os 22 error apparently this happens on windows and not on colab. In colab can just dump everything into memory
 
 train.csv -> original file
 

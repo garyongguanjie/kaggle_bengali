@@ -33,15 +33,22 @@ def train_model(model, criterion, optimizer, device, dataloaders, scheduler=None
             running_loss = 0.0
             running_corrects = 0
 
+            grapheme_corrects = 0
+            vowel_corrects = 0
+            consonant_corrects = 0
+
+
             # Iterate over data.
             for data in dataloaders[phase]:
 
                 inputs = data['image']
+
                 grapheme_root_label = data['grapheme_root']
                 vowel_diacritic_label = data['vowel_diacritic']
                 consonant_diacritic_label = data['consonant_diacritic']
 
                 inputs = inputs.to(device)
+
                 grapheme_root_label =  grapheme_root_label.to(device)
                 vowel_diacritic_label = vowel_diacritic_label.to(device)
                 consonant_diacritic_label =  consonant_diacritic_label.to(device)
@@ -53,7 +60,10 @@ def train_model(model, criterion, optimizer, device, dataloaders, scheduler=None
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
                     outputs = model(inputs)
-                    # preds = outputs.argmax(dim=1)
+                    
+                    grapheme_preds = outputs[:,:168].argmax(dim=1)
+                    vowel_preds = outputs[:,168:179].argmax(dim=1) + 168
+                    consonant_preds = outputs[:,179:186].argmax(dim=1) + 168 + 11
 
                     loss = criterion(outputs, grapheme_root_label.squeeze(1),vowel_diacritic_label.squeeze(1),consonant_diacritic_label.squeeze(1))
 
@@ -64,14 +74,22 @@ def train_model(model, criterion, optimizer, device, dataloaders, scheduler=None
 
                 # statistics
                 running_loss += loss.item() * inputs.size(0)
+                
 
+                grapheme_corrects += torch.sum(grapheme_preds == grapheme_root_label.data.squeeze(1))
+                vowel_corrects += torch.sum(vowel_preds == vowel_diacritic_label.data.squeeze(1))
+                consonant_corrects += torch.sum(consonant_preds== consonant_diacritic_label.data.squeeze(1))
+                
                 # running_corrects += torch.sum(preds == labels.data.squeeze(1))
             if phase == 'train' and scheduler != None:
                 scheduler.step()
 
             epoch_loss = running_loss / dataset_sizes[phase]
+
+            running_corrects = 0.5*grapheme_corrects.double() + 0.25*vowel_corrects.double() + 0.25*consonant_corrects.double()
+
             # epoch_acc = running_corrects.double() / dataset_sizes[phase]
-            epoch_acc = 0
+            epoch_acc = running_corrects / dataset_sizes[phase]
 
             print('{} Loss: {:.4f} Acc: {:.4f}'.format(
                 phase, epoch_loss, epoch_acc))
