@@ -24,9 +24,18 @@ validation_0.csv -> label file that corresponds to input validation_set_0.npy
 https://sutdapac-my.sharepoint.com/:f:/g/personal/gary_ong_mymail_sutd_edu_sg/Eo7SYmp7NttFqveH-3dxY9wBZiaBh4FpWtWe0Xj-zZaWgw
 
 ## Download straight to colab
+80-10-10.zip
+```
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EULzJcq-ZopEg25HAZGPaxYBguHDpAafpAFkIr5RxTtqkQ?e=XOHEjG&download=1" -O 80-10-10.zip
+```
+70-15-15.zip
+```
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EYhOtCLwVqlGtfZHCyuPewEB3za-ySztSTob2ghh1WC9zw?e=7ZvQEg&download=1" -O 70-15-15.zip
+```
+
 5split.zip
 ```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EY4SYAbFE99BqSW3A5LqqqUBbA73KjTLeLJ2-Emko4snVw?e=04bPHS" -O 5split.zip
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EY4SYAbFE99BqSW3A5LqqqUBbA73KjTLeLJ2-Emko4snVw?e=04bPHS&download=1" -O 5split.zip
 ```
 split_0.zip
 ```
