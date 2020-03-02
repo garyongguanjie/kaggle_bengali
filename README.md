@@ -16,11 +16,11 @@ https://sutdapac-my.sharepoint.com/:f:/g/personal/gary_ong_mymail_sutd_edu_sg/Eo
 ## Download straight to colab
 shuffle-80-10-10.zip
 ```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/ETBzVmouTtFBgdOjpNrSqKgB1u9nhTyT4jq2p0xzKDfAuw?e=eofgp9&download=1" -O shuffle-80-10-10.zip
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/ETBzVmouTtFBgdOjpNrSqKgBajAK70K7cDil6rCtBAaUew?e=MUu6r4&download=1" -O shuffle-80-10-10.zip
 ```
 shuffle-70-15-15.zip
 ```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/ESIe6K9tanZJrJ5bUlIUBrwBpXfkIM4xsmRAxUVI8VYEfA?e=CzeUpm&download=1" -O shuffle-70-15-15.zip
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/ESIe6K9tanZJrJ5bUlIUBrwBy7RQ57Ul2wp7hBp8AHRk0A?e=NSSs3B&download=1" -O shuffle-70-15-15.zip
 ```
 
 train_full.zip
