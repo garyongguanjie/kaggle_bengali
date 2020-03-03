@@ -6,7 +6,7 @@ import torch
 import numpy as np
 from PIL import Image
 class BengaliDataset(Dataset):
-    def __init__(self,npy_file,label_csv,transform=None):
+    def __init__(self,npy_file,label_csv,transform=None,aug=None):
         self.npy_file = np.load(npy_file)
         self.transform = transform
         df = pd.read_csv(label_csv)
@@ -15,9 +15,15 @@ class BengaliDataset(Dataset):
         self.vowel_diacritic = df["vowel_diacritic"].values
         self.consonant_diacritic = df["consonant_diacritic"].values
 
+        self.aug = aug
+
 
     def __getitem__(self, index):
         image_arr = self.npy_file[index]
+        # only do this on training
+        #use albumentations library
+        if self.aug != None:
+            image_arr = self.aug(image=image_arr)["image"]
         image_arr = Image.fromarray(image_arr).convert("RGB")
         image_arr = self.transform(image_arr)
         grapheme_root = torch.Tensor([self.grapheme_root[index]]).long()
