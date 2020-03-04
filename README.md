@@ -1,4 +1,7 @@
 # kaggle_bengali
+# Augmentation Colab visualisation
+This uses the albumentation library -> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-qal9-GSX54R3Z0ZbZKGfS0b4k8FS1ji)
+
 # Utilities
 Non esential code here \
 `bengali_numpy_dump` used to clean data before passing into dataloaders

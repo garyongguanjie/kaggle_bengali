@@ -219,7 +219,7 @@ if __name__ == "__main__":
     test_data = BengaliDataset("tvt_test2.npy","tvt_test_label2.csv",transform=transformation)
 
 
-    train_loader = DataLoader(train_data, batch_size=64, num_workers=4)
+    train_loader = DataLoader(train_data, batch_size=64, num_workers=4,shuffle=True)
     val_loader = DataLoader(val_data, batch_size=64, num_workers=4)
     test_loader = DataLoader(test_data, batch_size=64, num_workers=4)
 
