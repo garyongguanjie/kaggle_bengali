@@ -16,7 +16,7 @@ def crop_resize(img0, size=128, pad=16):
     #some images contain line at the sides
     HEIGHT = 137
     WIDTH = 236
-    ymin,ymax,xmin,xmax = bbox(img0[5:-5,5:-5] > 60)
+    ymin,ymax,xmin,xmax = bbox(img0[5:-5,5:-5] > 30)
     #cropping may cut too much, so we need to add it back
     xmin = xmin - 13 if (xmin > 13) else 0
     ymin = ymin - 10 if (ymin > 10) else 0
@@ -31,18 +31,15 @@ def crop_resize(img0, size=128, pad=16):
     img = np.pad(img, [((l-ly)//2,), ((l-lx)//2,)], mode='constant')
     return cv2.resize(img,(size,size))
 
-train_parquets = ["bengaliai-cv19/train_image_data_0.parquet","bengaliai-cv19/train_image_data_1.parquet","bengaliai-cv19/train_image_data_2.parquet","bengaliai-cv19/train_image_data_3.parquet"]
+if __name__ == "__main__":
+    import sys
+    train_parquets = ["bengaliai-cv19/train_image_data_0.parquet","bengaliai-cv19/train_image_data_1.parquet","bengaliai-cv19/train_image_data_2.parquet","bengaliai-cv19/train_image_data_3.parquet"]
 
-start = 0
-end = 0
-for parq in train_parquets:
-    df = pd.read_parquet(parq)
+    df = pd.read_parquet(train_parquets[int(sys.argv[1])])
     img_list = []
     for i in tqdm(range(len(df))):
         img = 255 -df.loc[i,:].values[1:].astype(np.uint8).reshape(137,236)
         img = (img*(255.0/img.max())).astype(np.uint8)
         img = crop_resize(img)
         img_list.append(img)
-    end = start + len(df) - 1
-    np.save("{}-{}".format(start,end),np.array(img_list))
-    start = end + 1
+    np.save(f"train_image_data_{sys.argv[1]}",np.array(img_list))
