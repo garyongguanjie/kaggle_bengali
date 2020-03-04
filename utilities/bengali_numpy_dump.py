@@ -16,7 +16,7 @@ def crop_resize(img0, size=128, pad=16):
     #some images contain line at the sides
     HEIGHT = 137
     WIDTH = 236
-    ymin,ymax,xmin,xmax = bbox(img0[5:-5,5:-5] > 80)
+    ymin,ymax,xmin,xmax = bbox(img0[5:-5,5:-5] > 60)
     #cropping may cut too much, so we need to add it back
     xmin = xmin - 13 if (xmin > 13) else 0
     ymin = ymin - 10 if (ymin > 10) else 0
