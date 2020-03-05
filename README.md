@@ -1,4 +1,10 @@
 # kaggle_bengali
+# Guide to not waste Kaggle submissions
+Test on the test set inside the kernel itself and make sure everything runs.\
+Check if your output matches other people's kernel.\
+Test on the train set inside the kernel to make sure everything fits in memory or doenst take too long. \
+Make sure to change it back to the test set clear your memory run everything again.\
+Click commit than wait for commit to be done click open->output-> submit to competition.
 # Augmentation Colab visualisation
 This uses the albumentation library -> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-qal9-GSX54R3Z0ZbZKGfS0b4k8FS1ji)
 
