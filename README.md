@@ -26,7 +26,7 @@ Note files regenerated with different preprocessing
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EayDZjbTF3JAi1VTlyiU5skB5VLEdUjjFTrktsTm29WB_Q?e=aO1YJR&download=1" -O 701515.zip
 ```
 ```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EUVuXRi5kChMvORVE7enxvIBu4l43wk1KclBOiaPHOLLtw?e=6RRFi9" -O 801010.zip
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EUVuXRi5kChMvORVE7enxvIBu4l43wk1KclBOiaPHOLLtw?e=6RRFi9&download=1" -O 801010.zip
 ```
 ## Unzip files
 
