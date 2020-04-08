@@ -1,4 +1,6 @@
 # kaggle_bengali
+Resnet18 Example notebook ->
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HRBWzEE009s9KySGiDEq1RCSGHcYx2z6)
 # Augmentation Colab visualisation
 This uses the albumentation library -> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-qal9-GSX54R3Z0ZbZKGfS0b4k8FS1ji)
 ## Download straight to colab
