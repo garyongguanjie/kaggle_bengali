@@ -21,22 +21,12 @@ Spliting used https://www.kaggle.com/yiheng/iterative-stratification which uses 
 Train-val-split according to ratio in the file name.
 
 ## Download straight to colab
-Note files regenerated with different preprocessing
-full training set unshuffled
 ```
-wget -c https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EdETBQQzxV9KpAWJaqKjF0MBu9AyqqI4Z8CWqYbH-yZKxw?e=fKRMOl&download=1 train2.npy
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EQGuIT9UUFlDv4IVasLW2dIBANJ5TPjK_hJfZ4yZS11LJQ?e=k6chXZ&download=1" split-0.zip
 ```
 ```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/Efzpnoe-ANJNu4G7saEnDiEBtJKF0Poq7Xa7lk4fNigX_Q?e=lKrx0X&download=1" -O 751212.zip
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EbxFBne-jWFMuP1dYk6H_DgBV5IJLQPt2BYtNW8dv0PNew?e=761f5d&download=1" unseen-val.zip
 ```
-```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EayDZjbTF3JAi1VTlyiU5skB5VLEdUjjFTrktsTm29WB_Q?e=aO1YJR&download=1" -O 701515.zip
-```
-```
-wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EUVuXRi5kChMvORVE7enxvIBu4l43wk1KclBOiaPHOLLtw?e=6RRFi9&download=1" -O 801010.zip
-```
-## Unzip files
-
 ```
 unzip <filename>
 ```
