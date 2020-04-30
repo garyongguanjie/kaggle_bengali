@@ -4,6 +4,10 @@ Resnet18 Example notebook ->
 # Augmentation Colab visualisation
 This uses the albumentation library -> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-qal9-GSX54R3Z0ZbZKGfS0b4k8FS1ji)
 ## Download straight to colab
+Datasets
+```
+wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EVrOU5p0-FhBggIuqB-rsCgBVzRTExFWLEjXdAVDwa1AQQ?e=FoLgld&download=1" -O train_full.zip
+```
 ```
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EQGuIT9UUFlDv4IVasLW2dIBANJ5TPjK_hJfZ4yZS11LJQ?e=k6chXZ&download=1" -O split-0.zip
 ```
