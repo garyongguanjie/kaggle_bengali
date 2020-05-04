@@ -51,12 +51,12 @@ Next, we need to install some required libraries.
 
 1. We assume you already have PyTorch (we used 1.4) and torchvision installed
 2. Install other packages with `pip install -r seen-unseen/requirements.txt`
-3. You can choose to train faster with apex [Install Apex following the instructions here](https://github.com/NVIDIA/apex#quick-start)
+3. You can choose to train faster with apex, [Install Apex following the instructions here](https://github.com/NVIDIA/apex#quick-start)
 
 ### Training and Inference
-The training code for seen model is in `seen-unseen/seen-model-bengali.ipynb`, it took 4 hours of training on 2080 Ti.
-The training code for unseen model is in `seen-unseen/unseen-model-bengali.ipynb`, it took 5.5 hours of training on 2080 Ti.
-The Inference code for kaggle submission is in `seen-unseen/inference-seen-unseen-models.ipynb`, it generates the submission.csv that can be used for submission on kaggle.
+- The training code for seen model is in `seen-unseen/seen-model-bengali.ipynb`, it took 4 hours of training on 2080 Ti.
+- The training code for unseen model is in `seen-unseen/unseen-model-bengali.ipynb`, it took 5.5 hours of training on 2080 Ti.
+- The Inference code for kaggle submission is in `seen-unseen/inference-seen-unseen-models.ipynb`, it generates the `submission.csv` that can be used for submission on kaggle.
 
 
 # Data Augmentation Colab Visualisation
