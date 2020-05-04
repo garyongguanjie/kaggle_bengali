@@ -13,12 +13,15 @@ Training full 105 epoch snapshot ensemble see `seresnext_ensemble.ipynb`
 TODO
 
 # Download Datasets
+Full Training npy file 200k graphemes
 ```
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EVrOU5p0-FhBggIuqB-rsCgBVzRTExFWLEjXdAVDwa1AQQ?e=FoLgld&download=1" -O train_full.zip
 ```
+Seen training set ~77% of 200k and seen validation set ~20% of 200k
 ```
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EQGuIT9UUFlDv4IVasLW2dIBANJ5TPjK_hJfZ4yZS11LJQ?e=k6chXZ&download=1" -O split-0.zip
 ```
+Unseen validation set ~3% of 200k
 ```
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EbxFBne-jWFMuP1dYk6H_DgBV5IJLQPt2BYtNW8dv0PNew?e=761f5d&download=1" -O unseen-val.zip
 ```
