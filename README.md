@@ -5,7 +5,7 @@ We are using Pytorch's implementation of Resnet18 as a baseline. For VGG, AlexNe
 
 # Model 1 (Longer Tails, sSE Pooling and SE-ResneXt Block)
 Resnet34 longer tails Training notebook see `resnet34_ensemble_random_erase.ipynb`\
-Training Notebook 30-epoch (Kaggle Kernel) [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
+Training Notebook 30-epoch (Kaggle Kernel) [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train?scriptVersionId=33097515)\
 Inference Notebook 30-epoch (Kaggle Kernel) [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)\
 Training full 105 epoch snapshot ensemble see `seresnext_ensemble.ipynb`
 
