@@ -1,11 +1,12 @@
-# kaggle_bengali
-Resnet18 Example notebook ->
+# Baseline Models
+Baseline Resnet18 Notebook ->
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HRBWzEE009s9KySGiDEq1RCSGHcYx2z6)
-# Augmentation Colab visualisation
-This uses the albumentation library -> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-qal9-GSX54R3Z0ZbZKGfS0b4k8FS1ji)
-# Train directly on kaggle
+We are using Pytorch's implementation of Resnet18 as a baseline. For VGG, AlexNet, GoogleNet and MobileNet, just change the library name to the corresponding model names in the notebook.
+
+# Model 1 (Longer Tails, sSE Pooling and SE-ResneXt Block)
 Minimal version of [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
 Inference for [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
+
 ## Download straight to colab
 Datasets
 ```
@@ -20,3 +21,6 @@ wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_
 ```
 unzip <filename>
 ```
+
+# Data Augmentation Colab Visualisation
+This uses the albumentation library -> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-qal9-GSX54R3Z0ZbZKGfS0b4k8FS1ji)
