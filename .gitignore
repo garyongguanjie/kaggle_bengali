@@ -8,3 +8,6 @@ settings.json
 split_*
 train_full
 .vscode
+
+seen-unseen/bengali/*
+seen-unseen/save/*
