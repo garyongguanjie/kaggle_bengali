@@ -5,7 +5,7 @@ We are using Pytorch's implementation of Resnet18 as a baseline. For VGG, AlexNe
 
 # Model 1 (Longer Tails, sSE Pooling and SE-ResneXt Block)
 Training Notebook (Kaggle Kernel) [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
-Inference Notebook (Kaggle Kernel) for [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
+Inference Notebook (Kaggle Kernel) [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
 
 # Model 2 (Seen and Unseen Model)
 TODO
