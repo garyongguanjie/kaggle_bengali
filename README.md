@@ -1,11 +1,11 @@
 # Baseline Models
-Baseline Resnet18 Notebook ->
+Baseline Resnet18 Notebook:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HRBWzEE009s9KySGiDEq1RCSGHcYx2z6)
 We are using Pytorch's implementation of Resnet18 as a baseline. For VGG, AlexNet, GoogleNet and MobileNet, just change the library name to the corresponding model names in the notebook.
 
 # Model 1 (Longer Tails, sSE Pooling and SE-ResneXt Block)
-Minimal version of [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
-Inference for [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
+Training Notebook (Kaggle Kernel) [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
+Inference Notebook (Kaggle Kernel) for [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
 
 # Model 2 (Seen and Unseen Model)
 TODO
