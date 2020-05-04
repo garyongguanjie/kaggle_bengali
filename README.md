@@ -7,8 +7,10 @@ We are using Pytorch's implementation of Resnet18 as a baseline. For VGG, AlexNe
 Minimal version of [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
 Inference for [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
 
-## Download straight to colab
-Datasets
+# Model 2 (Seen and Unseen Model)
+TODO
+
+# Download Datasets
 ```
 wget -c "https://sutdapac-my.sharepoint.com/:u:/g/personal/gary_ong_mymail_sutd_edu_sg/EVrOU5p0-FhBggIuqB-rsCgBVzRTExFWLEjXdAVDwa1AQQ?e=FoLgld&download=1" -O train_full.zip
 ```
