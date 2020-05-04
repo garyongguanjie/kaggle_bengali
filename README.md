@@ -4,8 +4,10 @@ Baseline Resnet18 Notebook:
 We are using Pytorch's implementation of Resnet18 as a baseline. For VGG, AlexNet, GoogleNet and MobileNet, just change the library name to the corresponding model names in the notebook.
 
 # Model 1 (Longer Tails, sSE Pooling and SE-ResneXt Block)
-Training Notebook (Kaggle Kernel) [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
-Inference Notebook (Kaggle Kernel) [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)
+Resnet34 longer tails Training notebook see `resnet34_ensemble_random_erase.ipynb`\
+Training Notebook 30-epoch (Kaggle Kernel) [se-resnext50 training code](https://www.kaggle.com/garyongguanjie/seresnext-50-train-public)\
+Inference Notebook 30-epoch (Kaggle Kernel) [se-resnext50](https://www.kaggle.com/garyongguanjie/seresnext-50-inference)\
+Training full 105 epoch snapshot ensemble see `seresnext_ensemble.ipynb`
 
 # Model 2 (Seen and Unseen Model)
 TODO
